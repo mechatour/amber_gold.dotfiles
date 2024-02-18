@@ -1,0 +1,105 @@
+{
+    "layer": "top", // Waybar at top layer
+    "position": "left", // Waybar position (top|bottom|left|right)
+    "spacing": 3, // Gaps between modules
+    "margin-top": 4,
+    "margin-bottom": 4,
+    "margin-left": 0,
+    "margin-right": 0,
+    // Choose the order of the modules
+    "modules-right": ["hyprland/window", "wlr/taskbar", "hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-left": ["custom/powermenu", "custom/wireguard", "network", "pulseaudio", "tray"],
+
+    "hyprland/workspaces": {
+        "rotate": 90,
+        "format": "{icon}",
+        "disable-scroll": true,
+        "all-outputs": false,
+        "on-click": "activate"
+    },
+
+     "wlr/taskbar": {
+        "rotate": 90,
+	"format": "{icon}",
+	"icon-size": 13,
+	"tooltip-format": "{title}",
+	"on-click": "activate",
+	"on-click-middle": "close"
+    },
+
+    "hyprland/window": {
+        "rotate":90,
+        "max-length": 200,
+        "separate-outputs": true
+    },
+
+    "clock": {
+        "rotate": 90,
+    	"format": "{:%b %d %H:%M}",
+        "tooltip-format" : "<small>{calendar}</small>",
+        "calendar": {
+		    "mode"          : "year",
+		    "mode-mon-col"  : 3,
+		    "weeks-pos"     : "right",
+		    "on-scroll"     : 1,
+		    "on-click-right": "mode",
+		    "format": {
+			    "months":     "<span color='#ffbf00'><b>{}</b></span>",
+			    "days":       "<span color='#f9e9d7'>{}</span>",
+			    "weeks":      "<span color='#f6bc45'>W{}</span>",
+			    "weekdays":   "<span color='#f6bc45'><b>{}</b></span>",
+			    "today":      "<span color='#ffbf00'><b>{}</b></span>"
+		    }
+        },
+	    "actions": {
+		    "on-click-right": "mode",
+		    "on-click-forward": "tz_up",
+		    "on-click-backward": "tz_down",
+		    "on-scroll-up": "shift_up",
+		    "on-scroll-down": "shift_down"
+	    }
+    
+    },
+    
+    "tray": {
+        "rotate": 90,
+        "icon-size": 14,
+        "spacing": 1
+    },
+
+    "pulseaudio": {
+        "rotate": 90,
+        "scroll-step": 5, // %, can be a float
+        "format": "vol:{volume}%",
+        "format-muted": "vol:mute",
+        "on-click": "qasmixer"
+     },
+
+    "network": {
+        "rotate": 90,
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "{essid}:{signalStrength}%",
+        "format-ethernet": "net:{ipaddr}",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "format-linked": "net:linked",
+        "format-disconnected": "net:disconnected",
+	"on-click": "nm-connection-editor"
+    },
+
+    "custom/wireguard": {
+        "rotate": 90,
+        "format": "vpn:{}",
+        "exec": "~/.config/waybar/scripts/wireguard.sh short",
+        "on-click": "rofi -modi 'VPN Menu:~/.config/waybar/scripts/wireguard-rofi.sh' -show 'VPN Menu'",
+        "interval": 10,
+        "return-type": "json"
+    },
+
+    "custom/powermenu": {
+        "rotate": 90,
+    	"format": "power",
+    	"on-click": "pkill rofi|| sh ~/.config/waybar/scripts/power-rofi.sh",
+    	"tooltip": false
+    }
+}

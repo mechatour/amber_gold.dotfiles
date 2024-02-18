@@ -1,0 +1,111 @@
+/*ROFI Amber Gold Theme by Zane Godden*/
+
+configuration {
+    show-icons:       true;
+    display-drun:     "Run Menu";
+    disable-history:  false;
+}
+
+* {
+    font:                "WOPRTweaked Nerd Font ZG 13";
+    foreground:          #ffbf00;
+    background-color:    #121107;
+    selected-background: #ffbf00;
+    selected-foreground: #121107;
+    separatorcolor:      #121107;
+    bordercolor:         #ffbf00;
+}
+
+#window {
+    border:           1;
+    border-radius:    5;
+    border-color:     @bordercolor;
+    padding:          0;
+    width:            500px;
+}
+#mainbox {
+    border:           0;
+    padding:          0;
+}
+#message {
+    border:           0px;
+    border-color:     @separatorcolor;
+    padding:          0px;
+}
+#textbox {
+    text-color:       @selected-foreground;
+    
+}
+#listview {
+    fixed-height:     0;
+    border:           0px;
+    border-color:     @bordercolor;
+    spacing:          0px;
+    scrollbar:        false;
+    padding:          2px 0px 4px 0px;
+}
+#element {
+    border:           0;
+    padding:          3px;
+}
+
+#element.normal, element.alternate {
+    background-color: @background-color;
+    text-color:       @foreground;
+}
+#element.selected {
+    background-color: @selected-background;
+    text-color:       @selected-foreground;
+}
+
+#scrollbar {
+    width:            2px;
+    border:           0;
+    handle-width:     8px;
+    padding:          0;
+}
+#sidebar {
+    border:           0px dash 0px 0px ;
+    border-color:     @separatorcolor;
+}
+#button.selected {
+    background-color: @selected-background;
+    text-color:       @selected-foreground;
+}
+#inputbar {
+    spacing:          0;
+    background-color: @selected-background;
+    padding:          10px 10px 7px 10px;
+    text-color:       @selected-foreground;
+}
+#case-indicator {
+    spacing:          0;
+    text-color:       @selected-foreground;
+    background-color: @selected-background;
+}
+#entry {
+    spacing:          0;
+    text-color:       @selected-foreground;
+    background-color: @selected-background;
+    width:20px;
+}
+#prompt {
+    spacing:          0;
+    text-color:       @selected-foreground;
+    background-color: @selected-background;
+    width:100px;
+}
+#inputbar {
+    children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];
+}
+#textbox-prompt-colon {
+    expand:           false;
+    str:              ": ";
+/*    margin:           0px 0.3em 0em 0em ;*/
+    background-color: @selected-background;
+    text-color:       @selected-foreground;
+}
+element-text, element-icon {
+    background-color: inherit;
+    text-color:       inherit;
+}

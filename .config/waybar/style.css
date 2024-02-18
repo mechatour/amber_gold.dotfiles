@@ -1,0 +1,156 @@
+@import url("./colors.css");
+* {
+    border-width: 1px;
+    border-color: @amber;
+    color: @amber;
+    border-radius:5px;
+    font-family: WOPRTweaked Nerd Font ZG, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-style: normal;
+/*    font-weight: bold;*/
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: transparent;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+button {
+}
+
+button:hover {
+}
+
+#workspaces {
+    margin-top: 2px;
+}
+
+#workspaces button {
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 3px;
+    padding-bottom: 0px;
+    margin-top: 3px;
+    background: @background-darker;
+    color: @foreground;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-top: 0px;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-bottom: 0px;
+}
+
+#workspaces button:hover {
+    background: @background;
+}
+
+#workspaces button.active {
+    background: @selection;
+}
+
+#workspaces button.urgent {
+}
+
+
+#mode {
+    background-color: @background-darker;
+}
+
+#clock,
+#network,
+#pulseaudio,
+#wireplumber,
+#tray,
+#mode,
+#custom-wireguard,
+#custom-powermenu{
+    background-color: @background-darker;
+    color: @amber;
+    border-style: solid;
+    border-width: 1px;
+    border-color: @amber;
+    border-radius:5px;
+    padding-left:4px;
+    padding-right: 0px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+#taskbar button {
+    margin-bottom: 3px;
+    background: @background-darker;
+    color: @foreground;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+#window {
+    margin-left: 1px;
+    margin-top: 3px;
+    padding: 4px;
+    background: @background-darker;
+}
+
+#tray {
+    padding-top: 4px;
+    padding-left: 1px;
+    padding-right: 1px;
+    background-color: @background-darker;
+}
+
+#tray button.empty {
+    border-width: 0px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+}
+
+#tray button {
+    background-color: @background;
+}
+
+#clock {
+}
+
+@keyframes blink {
+    to {
+        background-color: @background;
+        color: @amber;
+    }
+}
+
+label:focus {
+/*    background-color: #000F0F;*/
+}
+
+#network.disconnected {
+    background-color: @background;
+    color: @amber;
+}
+
+#pulseaudio.muted {
+    color: @amber;
+}
+
+#wireplumber {
+    background-color: @background;
+    color: @amber;
+}
+
+#wireplumber.muted {
+    background-color: @selection;
+}

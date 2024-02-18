@@ -1,0 +1,5 @@
+timeout 1800 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on'
+timeout 1805 '~/.config/swaylock/lock.sh'
+timeout 30 '~/.config/swaylock/lockedscreenoff.sh' resume '~/.config/swaylock/lockedscreenon.sh'
+before-sleep '~/.config/swaylock/lock.sh'
+lock '~/.config/swaylock/lock.sh'

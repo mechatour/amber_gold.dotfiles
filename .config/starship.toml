@@ -1,0 +1,29 @@
+format = """
+$username\
+$directory\
+$time\
+"""
+
+# Disable the blank line at the start of the prompt
+# add_newline = false
+
+# You can also replace your username with a neat symbol like   or disable this
+# and use the os module below
+[username]
+show_always = true
+style_user = "bg:#121107 fg:#FFBF00"
+style_root = "bg:#121107 fg:#FFBF00"
+format = '[ $user ]($style)'
+disabled = false
+
+[directory]
+style = "bg:#121107 fg:#FFBF00"
+format = "[| $path |]($style)"
+truncation_length = 20
+truncation_symbol = "…/"
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:#121107 fg:#FFBF00"
+format = '[ $time > ]($style)'

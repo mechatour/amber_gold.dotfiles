@@ -1,0 +1,97 @@
+[font]
+size = 13.0
+
+[font.bold]
+family = "WOPRTweaked Nerd Font ZG"
+style = "Bold"
+
+[font.bold_italic]
+family = "WOPRTweaked Nerd Font ZG"
+style = "Bold Italic"
+
+[font.italic]
+family = "WOPRTweaked Nerd Font ZG"
+style = "Bold Italic"
+
+[font.normal]
+family = "WOPRTweaked Nerd Font ZG"
+style = "Regular"
+
+[colors.primary]
+
+background = "#121107"
+foreground = "#ffbf00"
+bright_foreground = "#f9e9d7"
+
+[colors.cursor]
+
+text = "#121107"
+cursor = "#ffbf00"
+
+[cursor.style]
+shape = "Underline"
+blinking = "Always"
+
+[cursor]
+blink_interval = 400
+blink_timeout = 0
+unfocused_hollow = false
+thickness = 0.4
+
+[colors.vi_mode_cursor]
+
+text = "CellBackground"
+cursor = "CellForeground"
+
+[colors.selection]
+
+text = "CellForeground"
+background = "#e2ae00"
+
+[colors.normal]
+
+black = "#121107"
+red = "#9d7122"
+green = "#9d7122"
+yellow = "#ffbf00"
+blue = "#9d7122"
+magenta = "#f6bc45"
+cyan = "#e2ae00"
+white = "#f9e9d7"
+
+[colors.bright]
+
+black = "#2d2215"
+red = "#e2ae00"
+green = "#e2ae00"
+yellow = "#ffbf00"
+blue = "#9d7122"
+magenta = "#f6bc45"
+cyan = "#e2ae00"
+white = "#f9e9d7"
+
+[colors.search.matches]
+
+foreground = "#9d7122"
+background = "#ffbf00"
+
+[colors.search.focused_match]
+
+foreground = "#2d2215"
+background = "#f9e9d7"
+
+[colors.footer_bar]
+
+background = "#2d2215"
+foreground = "#f9e9d7"
+
+[colors.hints.start]
+
+foreground = "#2d2215"
+background = "#f9e9d7"
+
+[colors.hints.end]
+
+foreground = "#f9e9d7"
+background = "#2d2215"
+
