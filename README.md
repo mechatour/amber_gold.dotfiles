@@ -61,8 +61,8 @@
 - **Super+Q** for Alacritty
 - **Super+W** for Firefox
 - **Super+R** for rofi run menu
-- **Mouse+Left** Click to drag window
-- **Mouse+Right** Click to resize window
+- **Super+Mouse Left Button** to drag window
+- **Super+Mouse Right Button** Click to resize window
 - **Super+Mouse Wheel** Cycle through workspaces
 - **Super+Shift+Cursors** to swap windows
 - **Super+Ctrl+Cursors** to resize windows
@@ -101,7 +101,7 @@ Check out the shortcuts in hyprland.conf for the rest.
 | amber | #ffbf00 |
 | compliment | #e2ae00 |
 
-There are a few more slightly different colour values in the KVantum theme, but the base is the same.
+There are a few more slightly different colour values in the Kvantum theme, but the base is the same.
 
 [1]: /resources/shot1.png
 [2]: /resources/shot2.png
