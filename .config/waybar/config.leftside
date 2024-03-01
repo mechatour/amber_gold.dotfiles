@@ -1,17 +1,18 @@
 {
     "layer": "top", // Waybar at top layer
-    "position": "top", // Waybar position (top|bottom|left|right)
+    "position": "left", // Waybar position (top|bottom|left|right)
     "spacing": 3, // Gaps between modules
-    "margin-top": 0,
-    "margin-bottom": 0,
-    "margin-left": 4,
-    "margin-right": 4,
+    "margin-top": 4,
+    "margin-bottom": 4,
+    "margin-left": 0,
+    "margin-right": 0,
     // Choose the order of the modules
-    "modules-left": ["hyprland/workspaces","wlr/taskbar"],
+    "modules-right": ["hyprland/window", "wlr/taskbar", "hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["tray", "pulseaudio", "custom/wireguard","custom/powermenu"],
+    "modules-left": ["custom/powermenu", "custom/wireguard", "network", "pulseaudio", "tray"],
 
     "hyprland/workspaces": {
+        "rotate": 90,
         "format": "{icon}",
         "disable-scroll": true,
         "all-outputs": false,
@@ -19,6 +20,7 @@
     },
 
      "wlr/taskbar": {
+        "rotate": 90,
 	"format": "{icon}",
 	"icon-size": 13,
 	"tooltip-format": "{title}",
@@ -27,11 +29,13 @@
     },
 
     "hyprland/window": {
+        "rotate":90,
         "max-length": 200,
         "separate-outputs": true
     },
 
     "clock": {
+        "rotate": 90,
     	"format": "{:%b %d %H:%M}",
         "tooltip-format" : "<small>{calendar}</small>",
         "calendar": {
@@ -59,11 +63,13 @@
     },
     
     "tray": {
+        "rotate": 90,
         "icon-size": 14,
         "spacing": 1
     },
 
     "pulseaudio": {
+        "rotate": 90,
         "scroll-step": 5, // %, can be a float
         "format": "vol:{volume}%",
         "format-muted": "vol:mute",
@@ -71,6 +77,7 @@
      },
 
     "network": {
+        "rotate": 90,
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{essid}:{signalStrength}%",
         "format-ethernet": "net:{ipaddr}",
@@ -81,6 +88,7 @@
     },
 
     "custom/wireguard": {
+        "rotate": 90,
         "format": "vpn:{}",
         "exec": "~/.config/waybar/scripts/wireguard.sh short",
         "on-click": "rofi -modi 'VPN Menu:~/.config/waybar/scripts/wireguard-rofi.sh' -show 'VPN Menu'",
@@ -89,6 +97,7 @@
     },
 
     "custom/powermenu": {
+        "rotate": 90,
     	"format": "power",
     	"on-click": "pkill rofi|| sh ~/.config/waybar/scripts/power-rofi.sh",
     	"tooltip": false

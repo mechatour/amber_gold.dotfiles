@@ -10,6 +10,8 @@
 > - Waybar is minimalist and has tooltips for a calendar and a module for power and vpn connections.
 > - The Wallpaper is available in various sizes in the wallpaper directory.
 >
+> - There are two versions of the config included. It defaults to waybar at the top, but the left-hand side is also available. The files are included in the waybar directory `config.leftside` and `style.css.leftside` and also in the hyprland directory (so animations move according to bar) as `hyprland.conf.leftside`
+>
 
 ---
 

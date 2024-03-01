@@ -26,27 +26,27 @@ button:hover {
 }
 
 #workspaces {
-    margin-right: 2px;
+    margin-top: 2px;
 }
 
 #workspaces button {
-    padding-top: 5px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 3px;
     padding-bottom: 0px;
-    padding-left: 3px;
-    padding-bottom: 0px;
-    margin-right: 3px;
+    margin-top: 3px;
     background: @background-darker;
     color: @foreground;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
-    margin-left: 0px;
+    margin-top: 0px;
 }
 
 /* If workspaces is the rightmost module, omit right margin */
 .modules-right > widget:last-child > #workspaces {
-    margin-right: 0px;
+    margin-bottom: 0px;
 }
 
 #workspaces button:hover {
@@ -79,30 +79,31 @@ button:hover {
     border-width: 1px;
     border-color: @amber;
     border-radius:5px;
-    padding-top:4px;
-    padding-bottom: 0px;
-    padding-right: 3px;
-    padding-left: 3px;
+    padding-left:4px;
+    padding-right: 0px;
+    padding-top: 3px;
+    padding-bottom: 3px;
 }
 
 #taskbar button {
-    margin-right: 3px;
+    margin-bottom: 3px;
     background: @background-darker;
     color: @foreground;
-    padding: 0px 0px 0px 7px;
+    padding-bottom: 5px;
+    padding-top: 5px;
 }
 
 #window {
-    margin-right: 3px;
-    padding: 0px 3px 0px 3px;
-    font-size: 22px;
+    margin-left: 1px;
+    margin-top: 3px;
+    padding: 4px;
     background: @background-darker;
 }
 
 #tray {
-    padding-top: 1px;
-    padding-left: 3px;
-    padding-right: 3px;
+    padding-top: 4px;
+    padding-left: 1px;
+    padding-right: 1px;
     background-color: @background-darker;
 }
 
