@@ -1,20 +1,20 @@
 [font]
-size = 13.0
+size = 10.0
 
 [font.bold]
-family = "WOPRTweaked Nerd Font ZG"
+family = "Hack Nerd Font"
 style = "Bold"
 
 [font.bold_italic]
-family = "WOPRTweaked Nerd Font ZG"
+family = "Hack Nerd Font"
 style = "Bold Italic"
 
 [font.italic]
-family = "WOPRTweaked Nerd Font ZG"
+family = "Hack Nerd Font"
 style = "Bold Italic"
 
 [font.normal]
-family = "WOPRTweaked Nerd Font ZG"
+family = "Hack Nerd Font"
 style = "Regular"
 
 [colors.primary]
@@ -52,23 +52,23 @@ background = "#e2ae00"
 
 black = "#121107"
 red = "#9d7122"
-green = "#9d7122"
+green = "#d49d3a"
 yellow = "#ffbf00"
-blue = "#9d7122"
+blue = "#e8cb96"
 magenta = "#f6bc45"
 cyan = "#e2ae00"
 white = "#f9e9d7"
 
 [colors.bright]
 
-black = "#2d2215"
-red = "#e2ae00"
-green = "#e2ae00"
-yellow = "#ffbf00"
-blue = "#9d7122"
-magenta = "#f6bc45"
-cyan = "#e2ae00"
-white = "#f9e9d7"
+black = "#4b3923"
+red = "#fec400"
+green = "#fec400"
+yellow = "#ffc51a"
+blue = "#b78428"
+magenta = "#f7c358"
+cyan = "#fec400"
+white = "#faebdb"
 
 [colors.search.matches]
 

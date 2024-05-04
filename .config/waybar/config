@@ -8,8 +8,8 @@
     "margin-right": 4,
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces","wlr/taskbar"],
-    "modules-center": ["clock"],
-    "modules-right": ["tray", "pulseaudio", "custom/wireguard","custom/powermenu"],
+    "modules-center": ["clock", "custom/weather"],
+    "modules-right": ["tray", "pulseaudio", "custom/wireguard","idle_inhibitor","custom/powermenu"],
 
     "hyprland/workspaces": {
         "format": "{icon}",
@@ -92,5 +92,19 @@
     	"format": "power",
     	"on-click": "pkill rofi|| sh ~/.config/waybar/scripts/power-rofi.sh",
     	"tooltip": false
+    },
+    "custom/weather": {
+        "format": "{}°",
+        "tooltip": true,
+        "interval": 3600,
+        "exec": "~/scripts/wttrbar/target/release/wttrbar --location Eastleigh",
+        "return-type": "json"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
     }
 }

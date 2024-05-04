@@ -278,6 +278,8 @@
     mouse_middle_click = do_action, close_current
     mouse_right_click = close_all
 
+    ignore_dbusclose = true
+
 # Experimental features that may or may not work correctly. Do not expect them
 # to have a consistent behaviour across releases.
 [experimental]
@@ -294,14 +296,14 @@
     # Otherwise the "#" and following would be interpreted as a comment.
     background = "#121107"
     foreground = "#ffbf00"
-    timeout = 5
+    timeout = 5s
     # Icon for notifications with low urgency, uncomment to enable
     #new_icon = /path/to/icon
 
 [urgency_normal]
     background = "#121107"
     foreground = "#ffbf00"
-    timeout = 5
+    timeout = 5s
     # Icon for notifications with normal urgency, uncomment to enable
     #new_icon = /path/to/icon
 
@@ -309,7 +311,7 @@
     background = "#ffbf00"
     foreground = "#121107"
     frame_color = "#f9e9d7"
-    timeout = 0
+    timeout = 0s
     # Icon for notifications with critical urgency, uncomment to enable
     #new_icon = /path/to/icon
 

@@ -5,4 +5,4 @@
 sleep 5
 
 # Connect to talin
-nmcli connection up tln.surfshark
+nmcli connection up dal.surfshark

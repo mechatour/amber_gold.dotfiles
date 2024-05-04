@@ -71,7 +71,9 @@ button:hover {
 #wireplumber,
 #tray,
 #mode,
+#custom-weather,
 #custom-wireguard,
+#idle_inhibitor,
 #custom-powermenu{
     background-color: @background-darker;
     color: @amber;
@@ -83,6 +85,15 @@ button:hover {
     padding-bottom: 0px;
     padding-right: 3px;
     padding-left: 3px;
+}
+
+#custom-weather{
+    padding-top: 0px;
+}
+
+#idle_inhibitor{
+    padding-top: 1px;
+    padding-right: 9px;
 }
 
 #taskbar button {

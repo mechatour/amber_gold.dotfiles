@@ -85,6 +85,8 @@ _open_files_for_editing() {
 export GOPATH=$HOME/go
 export PATH=$HOME/scripts:$PATH
 export PATH=$PATH:$GOPATH/bin
+export LD_LIBRARY_PATH=/lib:/usr/lib:/usr/local/lib:/usr/local/lib64
+export COWPATH=/usr/share/cowsay/cows
 
 alias ls='ls --color=auto'
 alias ll='ls -lahv --ignore=..'
@@ -92,9 +94,15 @@ alias la='ls -axF'
 alias update='~/scripts/update.sh'
 alias emacs='~/scripts/emacs.sh'
 alias update-grub='sudo grub2-mkconfig -o /boot/grub2/grub.cfg'
-alias ssh='TERM=xterm-256color ssh'
+alias ssh='TERM=xterm ssh'
+alias formatc='astyle --style=1tbs --indent=spaces=4 --pad-comma --convert-tabs'
+alias formatrust='rustfmt --edition 2021'
+alias rustdev='vim -c "cd ~/Documents/Development/rust" -c "NERDTree"'
+alias dev='vim -c "cd ~/Documents/Development" -c "NERDTree"'
 
 eval "$(starship init bash)"
+eval "$(zoxide init --cmd cd bash)"
+fortune | cowsay -f `ls /usr/share/cowsay/cows/ | shuf -n 1`
 echo
 echo " GREETINGS PROFESSOR ${USER^^}."
 echo " SHALL WE PLAY A GAME?"
